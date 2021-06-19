@@ -13,8 +13,6 @@ from Strategy_Management import *
 from Excel_Processing import full_summary
 import Stocks
 
-mystocks = ['TCS', 'HDFCBANK', 'ONGC', 'WIPRO']
-
 now = datetime.now()
 date = str(now.year) + '{:02d}'.format(now.month) + '{:02d}'.format(now.day)
 
