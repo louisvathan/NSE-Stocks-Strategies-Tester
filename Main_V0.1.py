@@ -16,7 +16,7 @@ import Stocks
 now = datetime.now()
 date = str(now.year) + '{:02d}'.format(now.month) + '{:02d}'.format(now.day)
 
-stocks = Stocks.mystocks
+stocks = Stocks.mystocks        #Add your stocks as list here. Or add it in Stocks.py file and call it here.
 period1 = str(int(datetime((int(now.year)-5), (int(now.month)), (int(now.day)), 0, 0, tzinfo=timezone.utc).timestamp()))
 period2 = str(int(datetime((int(now.year)), (int(now.month)), (int(now.day)), 0, 0, tzinfo=timezone.utc).timestamp()))
 
