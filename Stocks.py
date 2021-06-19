@@ -20,17 +20,4 @@ nifty_below1000 = ['IOC', 'NTPC', 'ONGC', 'COALINDIA', 'GAIL', 'ITC', 'POWERGRID
                    'TATASTEEL', 'HDFCLIFE', 'AXISBANK', 'CIPLA', 'SBILIFE', 'M&M',
                    'HCLTECH', 'TECHM', 'INDUSINDBK', 'GRASIM']
 
-test_stocks = ['SBIN', 'TATASTEEL', 'DIVISLAB', 'KOTAKBANK', 'DRREDDY', 'ULTRACEMCO',
-               'ITC', 'CIPLA', 'HDFCBANK', 'HINDUNILVR', 'SUNPHARMA', 'JSWSTEEL', 'NTPC']
-
 mystocks = ['HDFCBANK', 'SBIN']
-
-buzzing_stocks = ['WIPRO', 'KOTAKBANK', 'BIOCON', 'VIPCLOTHNG', 'GABRIEL', 'ELGIEQUIP', 'FLUOROCHEM', 'LT']
-
-holdings = ['IRFC', 'ONGC']
-
-recent_signals = ['IOC', 'ONGC', 'HINDALCO', 'SUNPHARMA', 'CIPLA', 'M&M', 'GAIL', 'UPL']
-
-suggested = ['ASTRAZEN', 'HEROMOTOCO', 'INFY', 'INDIGO', 'CADILAHC', 'APOLLOHOSP', 'TATAELXSI']
-
-todayq4 = ['ABB', 'AXISBANK', 'BAJAJFINSV', 'BRITANNIA', 'HDFCAMC', 'HINDZINC', 'MARUTI', 'TVSMOTOR', 'UBL']
