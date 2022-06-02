@@ -6,6 +6,7 @@ from datetime import timezone
 from datetime import datetime
 import requests
 from openpyxl import Workbook
+import yfinance as yf
 
 start = time.time()
 
@@ -13,10 +14,12 @@ from Strategy_Management import *
 from Excel_Processing import full_summary
 import Stocks
 
+mystocks = ['TCS', 'HDFCBANK', 'ONGC', 'WIPRO']
+
 now = datetime.now()
 date = str(now.year) + '{:02d}'.format(now.month) + '{:02d}'.format(now.day)
 
-stocks = Stocks.mystocks        #Add your stocks as list here. Or add it in Stocks.py file and call it here.
+stocks = Stocks.mystocks
 period1 = str(int(datetime((int(now.year)-5), (int(now.month)), (int(now.day)), 0, 0, tzinfo=timezone.utc).timestamp()))
 period2 = str(int(datetime((int(now.year)), (int(now.month)), (int(now.day)), 0, 0, tzinfo=timezone.utc).timestamp()))
 
@@ -56,14 +59,24 @@ for stock in stocks:
             df_lt = pd.read_pickle(pkl_file)
             delay = 0
         else:
-            csv_url = "https://query1.finance.yahoo.com/v7/finance/download/{}.NS?period1={}&period2={}&interval=1d&events=history".format(stock, period1, period2)
-            r = requests.get(csv_url, allow_redirects=True)
-            open(csv_file, 'wb').write(r.content)
+            # csv_url = "https://query1.finance.yahoo.com/v7/finance/download/{}.NS?period1={}&period2={}&interval=1d&events=history".format(stock, period1, period2)
+            # r = requests.get(csv_url, allow_redirects=True)
+            # open(csv_file, 'wb').write(r.content)
+            # df_lt = pd.read_csv(csv_file)
+            # cur_ticker = yf.Ticker(stock+'.NS')
+            # df_lt = cur_ticker.history(period='1y')
+            df_lt = yf.download(stock+'.NS', start="{}-{}-{}".format(int(now.year)-5, int(now.month), int(now.day)),
+                                    end="{}-{}-{}".format(int(now.year), int(now.month), int(now.day))).to_csv(csv_file)
             df_lt = pd.read_csv(csv_file)
             df_lt = df_lt.dropna()
             df_lt = df_lt.reset_index()
-            df_lt.drop(['index'], axis=1, inplace=True)
+            
+            if df_lt.columns[0] == 'index':
+                df_lt.drop(['index'], axis=1, inplace=True)
+            elif df_lt.columns[0] == 'level_0':
+                df_lt.drop(['level_0'], axis=1, inplace=True)
             df_lt.to_pickle(pkl_file)
+            print(df_lt)
             delay = 2
 
     df_st = df_lt.tail(150)
