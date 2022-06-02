@@ -59,12 +59,6 @@ for stock in stocks:
             df_lt = pd.read_pickle(pkl_file)
             delay = 0
         else:
-            # csv_url = "https://query1.finance.yahoo.com/v7/finance/download/{}.NS?period1={}&period2={}&interval=1d&events=history".format(stock, period1, period2)
-            # r = requests.get(csv_url, allow_redirects=True)
-            # open(csv_file, 'wb').write(r.content)
-            # df_lt = pd.read_csv(csv_file)
-            # cur_ticker = yf.Ticker(stock+'.NS')
-            # df_lt = cur_ticker.history(period='1y')
             df_lt = yf.download(stock+'.NS', start="{}-{}-{}".format(int(now.year)-5, int(now.month), int(now.day)),
                                     end="{}-{}-{}".format(int(now.year), int(now.month), int(now.day))).to_csv(csv_file)
             df_lt = pd.read_csv(csv_file)
