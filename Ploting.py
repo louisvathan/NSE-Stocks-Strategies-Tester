@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 from matplotlib.widgets import Cursor, MultiCursor
 import numpy as np
+import re
 
 def reformat_large_tick_values(tick_val, pos):
     """
@@ -47,8 +48,9 @@ def stock_plot(plt_df, plot_full_location, stock):
     plt.title('{} Close Price History'.format(stock))
     plt.xlabel('Date', fontsize=18)
     plt.ylabel('Adj. Close Price in INR', fontsize=18)
-    
-    plot_name = '{}_plot({} to {}).png'.format(stock, plt_df['Date'][0], plt_df['Date'].iloc[-1])
+    # print(re.findall("[\d]+-[\d]+-[\d]+", str(plt_df['Date'][0]))[0])
+    plot_name = '{}_plot({} to {}).png'.format(stock, re.findall("[\d]+-[\d]+-[\d]+", str(plt_df['Date'][0]))[0], 
+                                                    re.findall("[\d]+-[\d]+-[\d]+", str(plt_df['Date'].iloc[-1]))[0])
     plot_file = plot_full_location + '/' + stock + '/' + plot_name
     plt.savefig(plot_file, dpi=150)
     
