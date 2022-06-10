@@ -1,4 +1,4 @@
-# TradeStrategies
+# NSE-Stocks-Strategies-Tester
 Takes EOD data from Yahoo Finance and runs it through various technical indicators and gives the output in Excel Format.
 
 ## Getting Started
