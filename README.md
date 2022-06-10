@@ -1,5 +1,5 @@
 # TradeStrategies
-Takes EOD data from Yahoo Finance and runs it through various technical indicators and gives the output.
+Takes EOD data from Yahoo Finance and runs it through various technical indicators and gives the output in Excel Format.
 
 ## Getting Started
 You need the following packages to run this program.
@@ -16,3 +16,6 @@ If you wish to give your contributions like fixing bugs, improving things and ad
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details
+
+## Terms & Conditions
+Please read these terms and conditions carefully before using Our Service.
