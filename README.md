@@ -44,3 +44,18 @@ stocks = Stocks.mystocks    # Edit this line
 Once the program excuted successfully, you can find a new folder is created in the same location of the program files with a naming syntax as "Results (YYYYMMDD)". Open that folder and you find the following folder structure.
 
 ![File Structure](https://github.com/louisvathan/NSE-Stocks-Strategies-Tester/blob/main/Sample/Images/Folder%20Structure.jpg?raw=true)
+
+Open the Summary file from the Results folder and there you can find the Buy and sell calls based on strategies as follows.
+
+![Summary](https://github.com/louisvathan/NSE-Stocks-Strategies-Tester/blob/main/Sample/Images/summary.jpg?raw=true)
+
+To see the detailed analysis about a particular stock, click on the cell which contains the stock name and it will open the analysis excel file. It looks as follows.
+
+![Stock Analysis](https://github.com/louisvathan/NSE-Stocks-Strategies-Tester/blob/main/Sample/Images/Analysis%20Sheet.jpg?raw=true)
+
+Here you can find the Buy/Sell signal and Backtest reports with its associated plots. To open the plots click on the below shown cells.
+
+![Highlighted Plots Cells](https://github.com/louisvathan/NSE-Stocks-Strategies-Tester/blob/main/Sample/Images/Plots%20Highlighted.jpg?raw=true)
+
+Here are some of the plot examples shown
+![Plot Examples](https://github.com/louisvathan/NSE-Stocks-Strategies-Tester/blob/main/Sample/Images/Charts.png?raw=true)
