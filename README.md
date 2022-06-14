@@ -25,13 +25,13 @@ Please read these terms and conditions carefully before using Our Service.
 
 **Step 2:** Open Stocks.py in your editor and add a variable with the stocks you desire as a list or edit the existing variables. Then save the file.
 
-```
+```python:
 mystocks = ['HDFCBANK', 'SBIN']
 ```
 
 **Step 3:** Open Main_V0.1.py in your editor and update the "stocks" variable (at Line 3) as per your desired variable from the Stocks.py file. Then save the file.
 
-```
+```python:
 # USER INPUT
 import Stocks
 stocks = Stocks.mystocks    # Edit this line
