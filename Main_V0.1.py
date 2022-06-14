@@ -1,3 +1,7 @@
+# USER INPUT
+import Stocks
+stocks = Stocks.mystocks
+
 import pandas as pd
 import os
 import time
@@ -12,12 +16,10 @@ start = time.time()
 
 from Strategy_Management import *
 from Excel_Processing import full_summary
-import Stocks
 
 now = datetime.now()
 date = str(now.year) + '{:02d}'.format(now.month) + '{:02d}'.format(now.day)
 
-stocks = Stocks.mystocks
 period1 = str(int(datetime((int(now.year)-5), (int(now.month)), (int(now.day)), 0, 0, tzinfo=timezone.utc).timestamp()))
 period2 = str(int(datetime((int(now.year)), (int(now.month)), (int(now.day)), 0, 0, tzinfo=timezone.utc).timestamp()))
 
